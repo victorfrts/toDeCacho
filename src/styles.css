@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    background-attachment: fixed;
+    background-repeat: no-repeat !important;
+    list-style: none;
+}
+
+header{
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 7.5vh;
+    background: #FFFFFF;
+}
+
+.header-bar{
+    width: 50%;
+    font-family: 'Montserrat';
+    color: #9767A9;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-bar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-bar li:hover{
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.header-bar2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.social-medias{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.social-medias img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.search{
+    padding: 5px 5px 5px 5px;
+    border-radius: 50px;
+    border: solid 3px #9767A9;
+    display: flex;
+}
+
+.search img:hover{
+    cursor: pointer;
+}
+
+.search:hover{
+    border: solid 3px #AC95BB;
+}
+
+.search input{
+    border-width:0px;
+    border:none;
+    font-size: 12px;
+}
+
+*:focus {
+    outline: none;
+}
+
+main{
+    display: flex; 
+    flex-direction: column;
+    z-index: 0;
+    position: relative;
+    top: 7.5vh;
+    width: 100%;
+    height: 115vh;
+}
+
+.main-painel{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    background: url("/assets/cabeludo.png");
+    color: #FFFFFF;
+}
+
+.main-painel h2{
+    width: 25%;
+    font-size: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.main-painel p{
+    width: 25%;
+    font-size: 40px;
+    font-family: 'Montserrat';
+}
+
+.main-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52%;
+    background: #9767A9;
+    color: #FFFFFF;
+}
+
+.main-detail h2{
+    height: 95%;
+    font-size: 65px;
+    width: 50%;
+    font-family: 'Playfair Display', serif;
+}
+
+.main-detail p{
+    height: 70%;
+    font-size: 25px;
+    width: 35%;
+    padding-left: 10px;
+    font-family: 'Montserrat';
+}
+
+.ordered-grid{
+    width: 90%;
+    left: 5%;
+    position: relative;
+    top: -5vh;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-left{
+    width: 45%;
+    left: 30vw;
+}
+
+.grid-right{
+    width: 45%;
+    position: relative;
+    left: -3vw;
+    top: 35vh;
+}
+
+.grid-detail{
+    height: 90vh;
+}
+
+.grid-detail img{
+    width: 100%;
+    height: auto;
+}
+
+.grid-detail div{
+    background: #9767A9;
+    width: 70%;
+    position: relative;
+    top: -15%;
+    left: 15%;
+    color:#FFFFFF;
+    padding: 15px;
+}
+
+.grid-detail div h3{
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.grid-detail div p{
+    padding-top: 5px;
+    font-size: 15px;
+    font-family: 'Montserrat';
+}
+
+.grid-last-detail{
+    height: 60vh;
+}
+
+.grid-last-detail img{
+    width: 100%;
+}
