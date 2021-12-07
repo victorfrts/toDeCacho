@@ -139,25 +139,48 @@ main{
 .book{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
-    gap: 0 1rem;
 }
 
 .book img{
     width: auto;
-    height: 60vh;
+    height: 70vh;
+}
+
+.book h4{
+    padding: 2rem;
+    color: #FFFFFF;
+    font-family: Playfair Display;
+    font-size: 3.5rem;
+}
+
+.book p{
+    padding: 0px 2rem 2rem 2rem;
+    font-family: Montserrat;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    white-space: pre-line;
 }
 
 .odd-page{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    height: 90vh;
-    border: solid 1px red;
+    height: 100vh;
 }
 
 .even-page{
-    height: 90vh;
-    border: solid 1px red;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+}
+
+.pages{
+    position: absolute;
+    top: 50%;
+    width: 60%;
+    background: #9767A9;
+    height: auto;
 }
 
 @media only screen and (min-width: 650px) {
