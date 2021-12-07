@@ -4,194 +4,170 @@
     background-attachment: fixed;
     background-repeat: no-repeat !important;
     list-style: none;
+    font-size: 100%;
 }
 
 header{
     z-index: 2;
-    width: 100%;
-    position: fixed;
+    height: 8vh;
+    width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    height: 7.5vh;
+    align-items: center;
+    font-family: Montserrat;
+    position: fixed;
     background: #FFFFFF;
 }
 
-.header-bar{
-    width: 50%;
-    font-family: 'Montserrat';
+.logoTodeCacho{
+    width: auto;
+    height: 60%;
+}
+
+.left-bar{
+    display: flex;
+    gap: 5rem;
+}
+
+.left-bar li{
     color: #9767A9;
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
-.header-bar ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.header-bar li:hover{
+.left-bar li:hover{
     cursor: pointer;
     font-weight: 900;
 }
 
-.header-bar2{
+.right-bar{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 20%;
-}
-
-.social-medias{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 40%;
-}
-
-.social-medias img:hover{
-    cursor: pointer;
-    opacity: 0.8;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .search{
-    padding: 5px 5px 5px 5px;
+    height: 3vh;
     border-radius: 50px;
     border: solid 3px #9767A9;
     display: flex;
 }
 
-.search img:hover{
-    cursor: pointer;
-}
-
-.search:hover{
-    border: solid 3px #AC95BB;
-}
-
 .search input{
-    border-width:0px;
-    border:none;
-    font-size: 12px;
-}
-
-*:focus {
+    width: 75%;
+    border: 0px;
     outline: none;
 }
 
-main{
-    display: flex; 
-    flex-direction: column;
-    z-index: 0;
-    position: relative;
-    top: 7.5vh;
-    width: 100%;
-    height: 115vh;
+.social-medias{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
-.main-painel{
+.social-medias img:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+main{
+    z-index: 1;
+    position: relative;
+    top: 8vh;
+    width: 100%;
+}
+
+.bigblackpower{
+    background: url("/assets/cabeludo.png");
+    width: auto;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    background: url("/assets/cabeludo.png");
+}
+
+.hands{
+    display: flex;
+    align-items: center;
+    height: 30%;
+    width: 30%;
+}
+
+.hands h2{
+    text-align: left; 
+    width: 50%;   
+    font-family: Playfair Display;
+    font-size: 6rem;
     color: #FFFFFF;
 }
 
-.main-painel h2{
-    width: 25%;
-    font-size: 100px;
-    font-family: 'Playfair Display', serif;
+.hands p{
+    text-align: left; 
+    width: 70%;   
+    font-family: Montserrat;
+    font-size: 3rem;
+    color: #FFFFFF;
 }
 
-.main-painel p{
-    width: 25%;
-    font-size: 40px;
-    font-family: 'Montserrat';
-}
-
-.main-detail{
+.tips{
+    height: 30vh;
+    background: #9767A9;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 52%;
-    background: #9767A9;
+    gap: 1rem;
+}
+
+.tips h3{
+    font-family: Playfair Display;
+    font-size: 5rem;
     color: #FFFFFF;
-}
-
-.main-detail h2{
-    height: 95%;
-    font-size: 65px;
-    width: 50%;
-    font-family: 'Playfair Display', serif;
-}
-
-.main-detail p{
-    height: 70%;
-    font-size: 25px;
-    width: 35%;
-    padding-left: 10px;
-    font-family: 'Montserrat';
-}
-
-.ordered-grid{
-    width: 90%;
-    left: 5%;
-    position: relative;
-    top: -5vh;
-    z-index: 1;
-    display: flex;
-    justify-content: space-around;
-}
-
-.grid-left{
     width: 45%;
-    left: 30vw;
+    height: 90%;
 }
 
-.grid-right{
-    width: 45%;
-    position: relative;
-    left: -3vw;
-    top: 35vh;
+.tips p{
+    font-family: Montserrat;
+    font-size: 1.80rem;
+    color: #FFFFFF;
+    width: 30%;
+    height: 90%;
 }
 
-.grid-detail{
-    height: 90vh;
+.book{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+    gap: 0 1rem;
 }
 
-.grid-detail img{
-    width: 100%;
-    height: auto;
-}
-
-.grid-detail div{
-    background: #9767A9;
-    width: 70%;
-    position: relative;
-    top: -15%;
-    left: 15%;
-    color:#FFFFFF;
-    padding: 15px;
-}
-
-.grid-detail div h3{
-    font-size: 30px;
-    font-family: 'Playfair Display', serif;
-}
-
-.grid-detail div p{
-    padding-top: 5px;
-    font-size: 15px;
-    font-family: 'Montserrat';
-}
-
-.grid-last-detail{
+.book img{
+    width: auto;
     height: 60vh;
 }
 
-.grid-last-detail img{
-    width: 100%;
+.odd-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    border: solid 1px red;
+}
+
+.even-page{
+    height: 90vh;
+    border: solid 1px red;
+}
+
+@media only screen and (min-width: 650px) {
+    .odd-page{
+        position: relative;
+        top: -5vh;
+    }
+    .even-page{
+        position: relative;
+        top: 25vh;
+    }
+
 }
