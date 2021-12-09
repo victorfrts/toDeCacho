@@ -10,7 +10,7 @@
 header{
     z-index: 2;
     height: 8vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -87,9 +87,19 @@ main{
 }
 
 .bigblackpower{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bighair{   
     background: url("/assets/cabeludo.png");
-    width: auto;
-    height: 75vh;
+    background-size: cover;    
+    width: 100%;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -99,11 +109,11 @@ main{
     display: flex;
     align-items: center;
     height: 30%;
-    width: 30%;
+    width: 35%;
 }
 
 .hands h2{
-    text-align: left; 
+    text-align: left;
     width: 50%;   
     font-family: Playfair Display;
     font-size: 6rem;
@@ -119,10 +129,9 @@ main{
 }
 
 .tips{
-    height: 30vh;
     background: #9767A9;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 1rem;
 }
@@ -133,14 +142,16 @@ main{
     color: #FFFFFF;
     width: 45%;
     height: 90%;
+
 }
 
 .tips p{
     font-family: Montserrat;
     font-size: 1.80rem;
     color: #FFFFFF;
-    width: 30%;
+    width: 40%;
     height: 90%;
+    padding: 1rem 0 5rem 0;
 }
 
 .book{
@@ -149,22 +160,22 @@ main{
 }
 
 .book img{
-    width: auto;
-    height: 70vh;
+    width: 90%;
+    height: 45vh;
 }
 
 .book h4{
     padding: 2rem;
     color: #FFFFFF;
     font-family: Playfair Display;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .book p{
     padding: 0px 2rem 2rem 2rem;
     font-family: Montserrat;
     color: #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     white-space: pre-line;
 }
 
@@ -172,36 +183,39 @@ main{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    height: 100vh;
+    height: 75vh;
 }
 
 .even-page{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    height: 100vh;
+    height: 75vh;
 }
 
 .last-page{
+    position: relative;
+    top: 15vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    height: 50vh;
+    height: 25vh;
 }
 
 .last-page img{
     width: 70%;
+    height: auto;
 }
 
 .pages{
     position: absolute;
-    top: 50%;
+    top: 42.5%;
     width: 60%;
     background: #9767A9;
     height: auto;
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 750px) {
     .odd-page{
         position: relative;
         top: -5vh;
@@ -210,6 +224,26 @@ main{
         position: relative;
         top: 25vh;
     }
+
+}
+
+@media only screen and (max-width: 750px) {
+    .left-bar{
+        display: none;
+    }
+    .right-bar{
+        display: none;
+    }
+    .tips{
+        flex-direction: column;
+    }
+    .tips p{
+        width: 100%;
+    }
+    .tips h3{
+        width: 100%;
+    }
+
 
 }
 
