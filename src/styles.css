@@ -161,6 +161,7 @@ main{
 
 .book img{
     width: 90%;
+    max-width: 650px;
     height: 45vh;
 }
 
@@ -227,7 +228,7 @@ main{
 
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1000px) {
     .left-bar{
         display: none;
     }
@@ -244,6 +245,10 @@ main{
         width: 100%;
     }
 
+    .book img{
+        min-width: 350px;
+        min-height: 175px;
+    }
 
 }
 
