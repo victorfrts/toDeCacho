@@ -26,6 +26,7 @@ header{
     height: 8vh;
     width: 8vh;
     background: #9767A9;
+    font-family: Montserrat;
 }
 
 .hidden-bar hr{
@@ -308,22 +309,14 @@ main{
 }
 
 @media only screen and (max-width: 768px) {
-    .left-bar{
-        display: none;
-    }
-    .right-bar{
-        display: none;
-    }
+    .left-bar{display: none;}
+    .right-bar{display: none;}
     .tips{
         padding-left: 1rem;
         flex-direction: column;
     }
-    .tips p{
-        width: 100%;
-    }
-    .tips h3{
-        width: 100%;
-    }
+    .tips p{width: 100%;}
+    .tips h3{width: 100%;}
     .book img{
         min-width: 350px;
         min-height: 175px;
@@ -334,6 +327,13 @@ main{
         align-items: center;
         justify-content: space-around;
         padding: 1.5rem 0rem 1.5rem 0rem;
+    }
+    .references{display: none;}
+    .router{display: none !important;}
+    .hidden-footer{display: flex !important;}
+    footer{
+        height: 20vh !important;
+        background: #FFFFFF !important;
     }
 
 }
@@ -347,6 +347,26 @@ footer{
     justify-content: space-around;
     font-family: Montserrat;
     color: #FFFFFF;
+}
+
+.hidden-footer{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden-routes{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hidden-copyright{
+    width: 70%;
 }
 
 .references{
