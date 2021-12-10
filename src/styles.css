@@ -166,15 +166,15 @@ main{
     text-align: left;
     width: 50%;   
     font-family: Playfair Display;
-    font-size: 6rem;
+    font-size: 4rem;
     color: #FFFFFF;
 }
 
 .hands p{
     text-align: left; 
-    width: 70%;   
+    width: 80%;   
     font-family: Montserrat;
-    font-size: 3rem;
+    font-size:3rem;
     color: #FFFFFF;
 }
 
@@ -192,7 +192,6 @@ main{
     color: #FFFFFF;
     width: 45%;
     height: 90%;
-
 }
 
 .tips p{
@@ -205,8 +204,9 @@ main{
 }
 
 .book{
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
 }
 
 .book img{
@@ -303,7 +303,7 @@ main{
         width: 35%;
     }
     .pages{
-        top: 35%;
+        top: 40%;
     }
 
 }
@@ -318,7 +318,7 @@ main{
     .tips p{width: 100%;}
     .tips h3{width: 100%;}
     .book img{
-        min-width: 350px;
+        min-width: 320px;
         min-height: 175px;
     }   
     .hidden-bar{
@@ -334,6 +334,18 @@ main{
     footer{
         height: 20vh !important;
         background: #FFFFFF !important;
+    }
+    .bighair{flex-direction: column;}
+    .hands{width: 80%;}  
+    .pages{width: 80%;}
+    .book{grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));}
+}
+
+@media only screen and (max-width: 425px){
+    .pages{width: 100%;}
+    .last-page{
+        position: relative;
+        top: -20vh;
     }
 
 }
