@@ -19,6 +19,55 @@ header{
     background: #FFFFFF;
 }
 
+.hidden-bar{
+    display: none;
+    position: fixed;
+    left: 0;
+    height: 8vh;
+    width: 8vh;
+    background: #9767A9;
+}
+
+.hidden-bar hr{
+    border: solid 1px #FFFFFF;
+    width: 50%;
+}
+
+.hidden-bar:hover ul{
+    display: block;
+}
+
+.hidden-bar ul{
+    display: none;
+    position: fixed;
+    top: 8vh;
+    left: -45px;
+    animation: 250ms show-bar forwards;
+}
+
+@keyframes show-bar{
+    0% {
+        transform: translateX(-100%)
+    }
+    100%{
+        transform: translateX(0%)
+    }
+}
+
+.hidden-bar li{
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    padding: 0.75rem 0.5rem 0.75rem 2rem;
+    margin: 1px 0px 0px 0px;
+    background: #9767A9;
+    background: hsl(284, 28%, 53%,0.9);
+    width: 110%;
+}
+
+.hidden-bar li:hover{
+    background: hsl(276, 22%, 66%)
+}
+
 .logoTodeCacho{
     width: auto;
     height: 60%;
@@ -26,12 +75,12 @@ header{
 
 .left-bar{
     display: flex;
-    gap: 5rem;
+    gap: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .left-bar li{
     color: #9767A9;
-    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -58,7 +107,7 @@ header{
 }
 
 .search input{
-    width: 75%;
+    width: 70%;
     border: 0px;
     outline: none;
 }
@@ -156,12 +205,12 @@ main{
 
 .book{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .book img{
     width: 90%;
-    max-width: 650px;
+    max-width: 550px;
     height: 45vh;
 }
 
@@ -169,11 +218,11 @@ main{
     padding: 2rem;
     color: #FFFFFF;
     font-family: Playfair Display;
-    font-size: 3rem;
+    font-size: 1.75rem;
 }
 
 .book p{
-    padding: 0px 2rem 2rem 2rem;
+    padding: 0px 1.25rem 1.25rem 1.25rem;
     font-family: Montserrat;
     color: #FFFFFF;
     font-size: 1.25rem;
@@ -201,6 +250,7 @@ main{
     align-items: flex-start;
     justify-content: center;
     height: 25vh;
+    width: 100%;
 }
 
 .last-page img{
@@ -216,7 +266,7 @@ main{
     height: auto;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1024px) {
     .odd-page{
         position: relative;
         top: -5vh;
@@ -225,10 +275,39 @@ main{
         position: relative;
         top: 25vh;
     }
+    .last-page{
+        position: relative;
+        top: 25vh;
+    }
+   
+}
+
+@media only screen and (max-width: 1023px){
+    .right-bar{
+        display: none;
+    }
+    .odd-page{
+        position: relative;
+        top: 0;
+    }
+    .even-page{
+        position: relative;
+        top: 0;
+    }
+    .last-page{
+        position: relative;
+        top: -25vh;
+    }
+    .last-page img{
+        width: 35%;
+    }
+    .pages{
+        top: 35%;
+    }
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
     .left-bar{
         display: none;
     }
@@ -236,6 +315,7 @@ main{
         display: none;
     }
     .tips{
+        padding-left: 1rem;
         flex-direction: column;
     }
     .tips p{
@@ -244,10 +324,16 @@ main{
     .tips h3{
         width: 100%;
     }
-
     .book img{
         min-width: 350px;
         min-height: 175px;
+    }   
+    .hidden-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1.5rem 0rem 1.5rem 0rem;
     }
 
 }
