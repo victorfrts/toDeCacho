@@ -134,6 +134,9 @@ main{
     position: relative;
     top: 8vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .bigblackpower{
@@ -347,8 +350,38 @@ main{
         position: relative;
         top: -20vh;
     }
-
 }
+
+.mural{
+    position: relative;
+    bottom: 12vh;
+    left: 5%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr 1fr
+}
+
+.left-mural, .top-left-mural div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-left-mural, .bottom-left-mural{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mural div{
+    background-size: cover;
+    background-position: center center;
+}
+
+#king{background: url("/assets/11.png") no-repeat;}
+#queenB{background: url("/assets/12.png") no-repeat;}
+#erik{background: url("/assets/13.png") no-repeat;}
+#gloria{background: url("/assets/16.png") no-repeat;}
+#tais{background: url("/assets/17.png") no-repeat;}
 
 footer{
     z-index: 1;
@@ -417,4 +450,5 @@ footer{
     cursor: pointer;
     background:rgba(0, 0, 0, 0.5);
 }
+
 
