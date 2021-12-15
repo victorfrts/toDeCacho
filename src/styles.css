@@ -314,7 +314,7 @@ main{
     grid-template-areas:    "hairy bearded womam womam"
                             "hairy bearded womam womam"
                             "girl snoopy womam womam";
-    gap: 15px;
+    grid-gap: 15px;
 }
 
 .mural{
@@ -323,14 +323,13 @@ main{
     width: 90%;
     display: grid;
     grid-template-columns: 2fr 1.325fr 1.325fr 2fr 1.325fr;
-    gap: 15px;
+    grid-gap: 15px;
 }
 
 .mural div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 15px;
 }
 
 .mural img{
