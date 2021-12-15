@@ -137,6 +137,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .bigblackpower{
@@ -210,6 +211,8 @@ main{
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+    width: 100%;
+    max-width: 1200px;
 }
 
 .book img{
@@ -249,7 +252,6 @@ main{
 
 .last-page{
     position: relative;
-    top: 15vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -270,118 +272,71 @@ main{
     height: auto;
 }
 
-@media only screen and (min-width: 1024px) {
-    .odd-page{
-        position: relative;
-        top: -5vh;
-    }
-    .even-page{
-        position: relative;
-        top: 25vh;
-    }
-    .last-page{
-        position: relative;
-        top: 25vh;
-    }
-   
+.hidden-mural{
+    display: none;
 }
 
-@media only screen and (max-width: 1023px){
-    .right-bar{
-        display: none;
-    }
-    .odd-page{
-        position: relative;
-        top: 0;
-    }
-    .even-page{
-        position: relative;
-        top: 0;
-    }
-    .last-page{
-        position: relative;
-        top: -25vh;
-    }
-    .last-page img{
-        width: 35%;
-    }
-    .pages{
-        top: 40%;
-    }
-
+.hidden-mural img{
+    max-width: 100%;
+    height: auto;
 }
 
-@media only screen and (max-width: 768px) {
-    .left-bar{display: none;}
-    .right-bar{display: none;}
-    .tips{
-        padding-left: 1rem;
-        flex-direction: column;
-    }
-    .tips p{width: 100%;}
-    .tips h3{width: 100%;}
-    .book img{
-        min-width: 320px;
-        min-height: 175px;
-    }   
-    .hidden-bar{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding: 1.5rem 0rem 1.5rem 0rem;
-    }
-    .references{display: none;}
-    .router{display: none !important;}
-    .hidden-footer{display: flex !important;}
-    footer{
-        height: 20vh !important;
-        background: #FFFFFF !important;
-    }
-    .bighair{flex-direction: column;}
-    .hands{width: 80%;}  
-    .pages{width: 80%;}
-    .book{grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));}
+.hidden-top #king{grid-area: king;background: url("/assets/11.png"); background-size: 100% 100%;}
+.hidden-top #queen{grid-area: queen;background: url("/assets/12.png"); background-size: 100% 100%;}
+.hidden-top #erik{grid-area: erik;background: url("/assets/13.png"); background-size: 100% 100%;}
+.hidden-top #tais{grid-area: tais;background: url("/assets/19.png"); background-size: 100% 100%;}
+
+.hidden-top{
+    display: grid;
+    grid-template-columns: 1.65fr 1fr 1fr;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-areas:    "king queen erik"
+                            "king tais tais"
+                            "king tais tais";
+    gap: 15px;
 }
 
-@media only screen and (max-width: 425px){
-    .pages{width: 100%;}
-    .last-page{
-        position: relative;
-        top: -20vh;
-    }
+.hidden-middle{
+    background: url("/assets/18.png");
+    background-size: 100% 100%;
+}
+
+.hidden-bottom #hairy{grid-area: hairy;background: url("/assets/15.png"); background-size: 100% 100%;}
+.hidden-bottom #bearded{grid-area: bearded;background: url("/assets/17.png"); background-size: 100% 100%;}
+.hidden-bottom #girl{grid-area: girl;background: url("/assets/16.png"); background-size: 100% 100%;}
+.hidden-bottom #snoopy{grid-area: snoopy;background: url("/assets/20.png"); background-size: 100% 100%;}
+.hidden-bottom #womam{grid-area: womam;background: url("/assets/14.png"); background-size: 100% 100%;}
+
+.hidden-bottom{
+    display: grid;
+    grid-template-columns: .9fr .9fr .75fr .75fr;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-areas:    "hairy bearded womam womam"
+                            "hairy bearded womam womam"
+                            "girl snoopy womam womam";
+    gap: 15px;
 }
 
 .mural{
     position: relative;
     bottom: 12vh;
-    left: 5%;
     width: 90%;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr 1fr
-}
-
-.left-mural, .top-left-mural div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.top-left-mural, .bottom-left-mural{
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 2fr 1.325fr 1.325fr 2fr 1.325fr;
+    gap: 15px;
 }
 
 .mural div{
-    background-size: cover;
-    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-#king{background: url("/assets/11.png") no-repeat;}
-#queenB{background: url("/assets/12.png") no-repeat;}
-#erik{background: url("/assets/13.png") no-repeat;}
-#gloria{background: url("/assets/16.png") no-repeat;}
-#tais{background: url("/assets/17.png") no-repeat;}
+.mural img{
+    max-width: 100%;
+    height: auto;
+}
 
 footer{
     z-index: 1;
@@ -451,4 +406,93 @@ footer{
     background:rgba(0, 0, 0, 0.5);
 }
 
+@media only screen and (min-width: 1024px) {
+    .odd-page{
+        position: relative;
+        top: -5vh;
+    }
+    .even-page{
+        position: relative;
+        top: 25vh;
+    }
+    .last-page{
+        position: relative;
+        top: 20vh;
+    }
+   
+}
 
+@media only screen and (max-width: 1023px){
+    .right-bar{
+        display: none;
+    }
+    .odd-page{
+        position: relative;
+        top: 0;
+    }
+    .even-page{
+        position: relative;
+        top: 0;
+    }
+    .last-page{
+        position: relative;
+        top: -20vh;
+    }
+    .last-page img{
+        width: 35%;
+    }
+    .pages{
+        top: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .mural{display: none !important;}
+    .left-bar{display: none;}
+    .right-bar{display: none;}
+    .tips{
+        padding-left: 1rem;
+        flex-direction: column;
+    }
+    .tips p{width: 100%;}
+    .tips h3{width: 100%;}
+    .book img{
+        min-width: 320px;
+        min-height: 175px;
+    }   
+    .hidden-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1.5rem 0rem 1.5rem 0rem;
+    }
+    .references{display: none;}
+    .router{display: none !important;}
+    .hidden-footer{display: flex !important;}
+    footer{
+        height: 20vh !important;
+        background: #FFFFFF !important;
+    }
+    .bighair{flex-direction: column;}
+    .hands{width: 80%;}  
+    .pages{width: 80%;}
+    .book{grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));}
+    .hidden-mural{
+        width: 90%;
+        display: grid;
+        grid-template-rows: 1fr .75fr 1fr;
+        position: relative;
+        bottom: 12vh;
+        gap: 15px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .pages{width: 100%;}
+    .last-page{
+        position: relative;
+        top: -15vh;
+    }
+}
