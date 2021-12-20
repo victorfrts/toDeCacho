@@ -281,10 +281,10 @@ main{
     height: auto;
 }
 
-.hidden-top #king{grid-area: king;background: url("../assets/11.png"); background-size: 100% 100%;}
-.hidden-top #queen{grid-area: queen;background: url("../assets/12.png"); background-size: 100% 100%;}
-.hidden-top #erik{grid-area: erik;background: url("../assets/13.png"); background-size: 100% 100%;}
-.hidden-top #tais{grid-area: tais;background: url("../assets/19.png"); background-size: 100% 100%;}
+.hidden-top #king{grid-area: king;background: url("assets/11.png"); background-size: 100% 100%;}
+.hidden-top #queen{grid-area: queen;background: url("assets/12.png"); background-size: 100% 100%;}
+.hidden-top #erik{grid-area: erik;background: url("assets/13.png"); background-size: 100% 100%;}
+.hidden-top #tais{grid-area: tais;background: url("assets/19.png"); background-size: 100% 100%;}
 
 .hidden-top{
     display: grid;
@@ -297,15 +297,15 @@ main{
 }
 
 .hidden-middle{
-    background: url("/assets/18.png");
+    background: url("assets/18.png");
     background-size: 100% 100%;
 }
 
-.hidden-bottom #hairy{grid-area: hairy;background: url("../assets/15.png"); background-size: 100% 100%;}
-.hidden-bottom #bearded{grid-area: bearded;background: url("../assets/17.png"); background-size: 100% 100%;}
-.hidden-bottom #girl{grid-area: girl;background: url("../assets/16.png"); background-size: 100% 100%;}
-.hidden-bottom #snoopy{grid-area: snoopy;background: url("../assets/20.png"); background-size: 100% 100%;}
-.hidden-bottom #womam{grid-area: womam;background: url("../assets/14.png"); background-size: 100% 100%;}
+.hidden-bottom #hairy{grid-area: hairy;background: url("assets/15.png"); background-size: 100% 100%;}
+.hidden-bottom #bearded{grid-area: bearded;background: url("assets/17.png"); background-size: 100% 100%;}
+.hidden-bottom #girl{grid-area: girl;background: url("assets/16.png"); background-size: 100% 100%;}
+.hidden-bottom #snoopy{grid-area: snoopy;background: url("assets/20.png"); background-size: 100% 100%;}
+.hidden-bottom #womam{grid-area: womam;background: url("assets/14.png"); background-size: 100% 100%;}
 
 .hidden-bottom{
     display: grid;
